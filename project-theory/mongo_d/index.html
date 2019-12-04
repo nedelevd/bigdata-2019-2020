@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Университет</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login">
+    <form id="login_form">
+      <div>
+        <label for="login_id">ID</label>
+        <input id="login_id" type="text" />
+        <button type="submit">Вход</button>
+      </div>
+    </form>
+  </div>
+  <div id="dashboard" class="hidden">
+    <table>
+      <thead>
+        <tr>
+          <th>Валута</th>
+          <th>Потребители</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bitcoin</td>
+          <td>
+            <ul id="dashboard_BTC"></ul>
+          </td>
+        </tr>
+        <tr>
+          <td>NEO</td>
+          <td>
+            <ul id="dashboard_NEO"></ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Ripple</td>
+          <td>
+            <ul id="dashboard_XRP"></ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Litecoin</td>
+          <td>
+            <ul id="dashboard_LTC"></ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Ethereum Classic</td>
+          <td>
+            <ul id="dashboard_ETC"></ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <form id='transaction_form'>
+      <h4>Паричен превод</h4>
+      <div>
+        <label for="transaction_user">Потребител</label>
+        <select name="transaction_user" id="transaction_user"></select>
+      </div>
+      <div>
+        <label for="transaction_currency">Валута</label>
+        <select name="transaction_currency" id="transaction_currency">
+          <option value="BTC">Bitcoin</option>
+          <option value="NEO">NEO</option>
+          <option value="XRP">Ripple</option>
+          <option value="LTC">Litecoin</option>
+          <option value="ETC">Ethereum Classic</option>
+        </select>
+      </div>
+      <div>
+        <label for="transaction_amount">Сума</label>
+        <input type="text" name="transaction_amount" id="transaction_amount">
+      </div>
+      <button type="submit">Потвърди</button>
+    </form>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
